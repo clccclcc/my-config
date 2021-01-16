@@ -21,6 +21,8 @@ Remote Repository 을 생성 한다.
 $해당 폴더에 오른쪽 마우스로 메뉴 호출 및 선책 (Git Bash here)
 $git init 
 $git remote add origin  {repository address}
+$git remote rm origin <= 이미만들어진 origin 삭제 
+
 >>> 접속 계정 만들어 놓기 
 $git remote -v  <= 기본 url 보기 
 $git remote set-url origi  https://{ID}:{PWD}@github.com/clccclcc/demo2.git
