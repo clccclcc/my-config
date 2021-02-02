@@ -1,0 +1,8 @@
+방법1)
+
+watch -d -n 0.5 nvidia-smi
+
+
+방법2)
+$ pip install gpustat
+$ gpustat -cp 
