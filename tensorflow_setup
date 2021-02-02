@@ -1,0 +1,56 @@
+[tensorflow 기초 이론 및 환경 설정]
+0. 유명한 신경망 라이브러리 
+- 연구용: torch 
+- 실제용: tensorflow
+
+1. tensorflow 란 무엇인가? 
+ - 1.0 , 2.x
+ - tensor란 무엇인가? (물리학 용어, 병렬처리를 위해 필)
+ 
+2. keras 와 tensorflow 결합  
+- 추상화와 쉬운 접근 (속도의 희생)
+
+3. 개발환결 설정 (가상 다중환경:os 무관 )
+- anaconda 가상 환경 vs python 가상환경 
+conda info --envs
+conda create -n part3a python=3.7  anaconda (3.8 tensorflow not support )
+conda activate part3a
+
+conda  install tensorflow 
+conda install spyder 
+
+conda deactivate
+
+참고) 환경 제거 
+conda remove --name tensorflow35 --all
+
+# conda remove -n part3  --all
+---------------------------------
+4. tensorflow 설치 (CPU버젼)
+---------------------------------
+base> conda info  --envs
+base> conda activate part3a
+part3a> conda list  (설치된 패키지 보기)
+part3a> conda install tensorflow 
+part3a> conda install spyder 
+
+---------------------------------
+5. tensorflow GUP 버젼 설치 
+---------------------------------
+5.1 하드웨어 준비 (RTX 2080Ti)
+- Cuda 설치 
+- cuDNN 설치 
+
+5.2 하드웨어 드라이버 설치된
+
+5.3 가상환경 준비 (tensorflow-gpu)
+base> conda -n part3gpu python=3.7 
+base> conda activate part3gpu
+gpu> conda install tensorflow-gpu 
+gpu> conda install spyder 
+
+5.4 동작 확인 
+def lab5():
+    print(tf.test.is_gpu_available()) # GPU 사용이 가능한가 True/False
+    print(tf.test.gpu_device_name()) # 첫번째 GPU 이름 출력 
+    print(tf.config.experimental.list_physical_devices()) # 이용 가능한 모든 CPU/GPU 목록 
