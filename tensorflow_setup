@@ -1,3 +1,11 @@
+[2021.2.8] tensorflow 상위 버젼 설치 
+
+pip install notebook
+pip install tensorflow-gpu==2.4.0
+pip install tensorflow==2.4.0
+pip install matplotlib
+
+
 [tensorflow 기초 이론 및 환경 설정]
 0. 유명한 신경망 라이브러리 
 - 연구용: torch 
